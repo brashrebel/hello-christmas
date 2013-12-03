@@ -3,6 +3,10 @@ hello-christmas
 
 My Christmas plugin
 
-This is my holly, jolly plugin that serves as a festive alternative to Hello Dolly. It will only work if Hello Dolly is NOT active.
+Christmas lovers can now enjoy the holiday spirit in their WordPress dashboards! Rejoice and be glad!
 
-All this plugin does is show random lyrics from Christmas songs in the upper right corner of the admin screen.
+So for most of the year we can enjoy snippets of a classic jazz tune displayed in our dashboard. But when the holiday season rolls around and you are feeling the Christmas spirit, this little plugin presents a nice alternative.
+
+When activated this plugin checks to make sure Hello Dolly is NOT activated and if that is the case, displays random lyrics from popular Christmas songs in the upper right hand corner of the admin screen.
+
+For further convenience, just in case you forget to deactivate this after the holidays, the plugin will only operate if Christmas is less than 40 days away.

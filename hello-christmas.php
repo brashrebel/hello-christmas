@@ -3,7 +3,7 @@
 Plugin Name: Hello Christmas
 Description: It's Christmas time. We can look at famous jazz lyrics for the rest of the year. This plugin is a festive alternative to Hello, Dolly. Random Christmas song lyrics will be shown at the top of your admin screen.
 Author: Kyle Maurer
-Version: 1.0
+Version: 1.1
 Author URI: http://realbigmarketing.com/
 */
 
