@@ -39,7 +39,15 @@ O'er the fields we go
 What fun it is <span>to ride and sing</span>
 O come <span>all ye</span> faithful
 Oh Chrismas tree, <span>oh Christmas tree</span>
-O little town of <span>Bethlehem</span>";
+O little town of <span>Bethlehem</span>
+Soon it will be <span>Christmas</span> day
+It's <span>Christmas Eve</span> and these shoes are <span>just her size</span>
+Go tell <span>it on the</span> mountain
+Candles burnin' low. <span>Lots of mistletoe.</span>
+Let them know it's <span>Christmas time</span>
+Oh the <span>weather outside</span> is frightful
+The <span>lights</span> are turned way <span>down low</span>
+Up on the house top <span>click,</span> click, <span>click</span>";
 
 	// Here we split it into lines
 	$lyrics = explode( "\n", $lyrics );
@@ -47,6 +55,7 @@ O little town of <span>Bethlehem</span>";
 	// And then randomly choose a line
 	return wptexturize( $lyrics[ mt_rand( 0, count( $lyrics ) - 1 ) ] );
 }
+
 function days_until_christmas() {
 	//How long until Christmas?
 	$year = date("Y");
@@ -87,7 +96,7 @@ function christmas_css() {
 		font-style: italic;
 	}
 	#christmas span {
-	color: #D60000;
+		color: #D60000;
 	}
 	</style>
 	";
