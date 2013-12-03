@@ -47,10 +47,20 @@ O little town of <span>Bethlehem</span>";
 	// And then randomly choose a line
 	return wptexturize( $lyrics[ mt_rand( 0, count( $lyrics ) - 1 ) ] );
 }
-
+function days_until_christmas() {
+	//How long until Christmas?
+	$year = date("Y");
+	$target = mktime(0, 0, 0, 12, 25, $year);
+	$today = time();
+	$difference =($target-$today);
+	$days =(int) ($difference/86400);
+	return $days;
+}
 // This just echoes the chosen line, we'll position it later
 function hello_christmas() {
-	if (!function_exists('hello_dolly') ) {
+
+	//Only go if no Hello Dolly and less than 40 days until Christmas
+	if (!function_exists('hello_dolly') && days_until_christmas()<40) {
 	$chosen = christmas_get_lyric();
 	echo "<p id='christmas'>$chosen</p>";
 	}
@@ -61,7 +71,7 @@ add_action( 'admin_notices', 'hello_christmas' );
 
 // We need some CSS to position the paragraph
 function christmas_css() {
-		if (!function_exists('hello_dolly') ) {
+		if (!function_exists('hello_dolly')  && days_until_christmas()<40) {
 	// This makes sure that the positioning is also good for right-to-left languages
 	$x = is_rtl() ? 'left' : 'right';
 
