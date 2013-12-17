@@ -15,7 +15,7 @@ Let it snow, <span>let it snow,</span> let it snow!
 When we <span>finally kiss</span> goodnight
 Chestnuts <span>roasting on an</span> open fire
 Jack frost <span>nipping at your</span> nose
-Yultide carols <span>being sung by</span> a choir
+Yuletide carols <span>being sung by</span> a choir
 With a corn cob pipe <span>and a button nose</span>
 Rudolph the <span>red nosed</span> reindeer
 ...had a very <span>shiny nose</span>
@@ -46,6 +46,12 @@ Go tell <span>it on the</span> mountain
 Candles burnin' low. <span>Lots of mistletoe.</span>
 Let them know it's <span>Christmas time</span>
 Oh the <span>weather outside</span> is frightful
+Santa <span>baby...</span>
+Now hurry <span>down the chimney</span> tonight
+It's the most <span>wonderful time</span> of the year
+And so this is <span>Christmas</span>
+Simply having a <span>wonderful Christmas time</span>
+The star is brightly <span>shining</span>
 The <span>lights</span> are turned way <span>down low</span>
 Up on the house top <span>click,</span> click, <span>click</span>";
 
