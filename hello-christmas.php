@@ -164,7 +164,7 @@ function hello_christmas_css() {
 	}
 	@-webkit-keyframes falling {
 	    0%{
-	      -webkit-transform: translateY(0);
+	      -webkit-transform: translateY(-40px);
 	    }
 	    100% {
 	      -webkit-transform: translateY(18px);
@@ -172,7 +172,7 @@ function hello_christmas_css() {
 	}
 	@-moz-keyframes falling {
 	    0%{
-	      -moz-transform: translateY(0);
+	      -moz-transform: translateY(-40px);
 	    }
 	    100% {
 	      -moz-transform: translateY(18px);
@@ -180,7 +180,7 @@ function hello_christmas_css() {
 	}
 	@-ms-keyframes falling {
 	    0%{
-	      -ms-transform: translateY(0);
+	      -ms-transform: translateY(-40px);
 	    }
 	    100% {
 	      -ms-transform: translateY(18px);
