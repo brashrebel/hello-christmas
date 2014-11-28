@@ -3,7 +3,7 @@
 Plugin Name: Hello Christmas
 Description: It's Christmas time. We can look at famous jazz lyrics for the rest of the year. This plugin is a festive alternative to Hello, Dolly. Random Christmas song lyrics will be shown at the top of your admin screen.
 Author: Kyle Maurer
-Version: 1.1
+Version: 1.2
 Author URI: http://realbigmarketing.com/
 */
 
@@ -52,6 +52,8 @@ It's the most <span>wonderful time</span> of the year
 And so this is <span>Christmas</span>
 Simply having a <span>wonderful Christmas time</span>
 The star is brightly <span>shining</span>
+But baby it's <span>cold outside</span>
+Put some records on <span>while I pour</span>
 The <span>lights</span> are turned way <span>down low</span>
 Up on the house top <span>click,</span> click, <span>click</span>";
 
@@ -64,20 +66,22 @@ Up on the house top <span>click,</span> click, <span>click</span>";
 
 function days_until_christmas() {
 	//How long until Christmas?
-	$year = date("Y");
-	$target = mktime(0, 0, 0, 12, 25, $year);
-	$today = time();
-	$difference =($target-$today);
-	$days =(int) ($difference/86400);
+	$year       = date( "Y" );
+	$target     = mktime( 0, 0, 0, 12, 25, $year );
+	$today      = time();
+	$difference = ( $target - $today );
+	$days       = (int) ( $difference / 86400 );
+
 	return $days;
 }
+
 // This just echoes the chosen line, we'll position it later
 function hello_christmas() {
 
 	//Only go if no Hello Dolly and less than 40 days until Christmas
-	if (!function_exists('hello_dolly') && days_until_christmas()<40) {
-	$chosen = christmas_get_lyric();
-	echo "<p id='christmas'>$chosen</p>";
+	if ( ! function_exists( 'hello_dolly' ) && days_until_christmas() < 40 ) {
+		$chosen = christmas_get_lyric();
+		echo "<div id='christmas'><span class='hello-snow'><i></i><i></i><i></i><i></i></span>$chosen</div>";
 	}
 }
 
@@ -85,12 +89,13 @@ function hello_christmas() {
 add_action( 'admin_notices', 'hello_christmas' );
 
 // We need some CSS to position the paragraph
-function christmas_css() {
-		if (!function_exists('hello_dolly')  && days_until_christmas()<40) {
-	// This makes sure that the positioning is also good for right-to-left languages
-	$x = is_rtl() ? 'left' : 'right';
+// Falling snow help from http://standardista.com/snow/
+function hello_christmas_css() {
+	if ( ! function_exists( 'hello_dolly' ) && days_until_christmas() < 40 ) {
+		// This makes sure that the positioning is also good for right-to-left languages
+		$x = is_rtl() ? 'left' : 'right';
 
-	echo "
+		echo "
 	<style type='text/css'>
 	#christmas {
 		float: $x;
@@ -100,15 +105,85 @@ function christmas_css() {
 		font-size: 11px;
 		color: #006D00;
 		font-style: italic;
+    	position: relative;
 	}
 	#christmas span {
 		color: #D60000;
 	}
-	</style>
-	";
+	#christmas .hello-snow i {
+		position: absolute;
+		height: 2px;
+		width: 2px;
+		display: inline-block;
+		background-color: #fff;
+		-webkit-animation: falling 1s ease-in-out 1s infinite;
+		-moz-animation: falling 1s ease-in-out 1s infinite;
+		-ms-animation: falling 1s ease-in-out 1s infinite;
+		animation-name: falling;
+		animation-duration: 1s;
+		animation-timing-function: ease-in-out;
+		animation-iteration-count:infinite;
+		animation-delay: 2s;
+		-webkit-animation-direction: normal;
+		-moz-animation-direction: normal;
+		-ms-animation-direction: normal;
+	}
+	#christmas i:nth-last-of-type(2) {
+		left: 20%;
+		animation-duration: 1.5s;
+		-webkit-animation: falling 1.5s ease-in-out 1.5s infinite;
+		-moz-animation: falling 1.5s ease-in-out 1.5s infinite;
+		-ms-animation: falling 1.5s ease-in-out 1.5s infinite;
+	}
+	#christmas i:nth-last-of-type(3) {
+		left: 50%;
+		animation-duration: 2s;
+		-webkit-animation: falling 2s ease-in-out 2s infinite;
+		-moz-animation: falling 2s ease-in-out 2s infinite;
+		-ms-animation: falling 2s ease-in-out 2s infinite;
+	}
+	#christmas i:nth-last-of-type(4) {
+		left: 75%;
+		animation-delay: 1s;
+		animation-duration: 1.1s;
+		-webkit-animation: falling 1.1s ease-in-out 1.1s infinite;
+		-moz-animation: falling 1.1s ease-in-out 1.1s infinite;
+		-ms-animation: falling 1.1s ease-in-out 1.1s infinite;
+	}
+	@keyframes falling {
+	    0% {
+	      top: -40px;
+	    }
+	    100% {
+	      top: 18px;
+	    }
+	}
+	@-webkit-keyframes falling {
+	    0%{
+	      -webkit-transform: translateY(0);
+	    }
+	    100% {
+	      -webkit-transform: translateY(18px);
+	    }
+	}
+	@-moz-keyframes falling {
+	    0%{
+	      -moz-transform: translateY(0);
+	    }
+	    100% {
+	      -moz-transform: translateY(18px);
+	    }
+	}
+	@-ms-keyframes falling {
+	    0%{
+	      -ms-transform: translateY(0);
+	    }
+	    100% {
+	      -ms-transform: translateY(18px);
+	    }
+    }
+	</style>";
 	}
 }
 
-add_action( 'admin_head', 'christmas_css' );
-
-?>
+add_action( 'admin_head', 'hello_christmas_css' );
