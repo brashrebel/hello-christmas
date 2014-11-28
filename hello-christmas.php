@@ -47,6 +47,7 @@ Candles burnin' low. <span>Lots of mistletoe.</span>
 Let them know it's <span>Christmas time</span>
 Oh the <span>weather outside</span> is frightful
 Santa <span>baby...</span>
+I played my drum for Him <span>barump barump bump</span>
 Now hurry <span>down the chimney</span> tonight
 It's the most <span>wonderful time</span> of the year
 And so this is <span>Christmas</span>
@@ -55,6 +56,9 @@ The star is brightly <span>shining</span>
 But baby it's <span>cold outside</span>
 Put some records on <span>while I pour</span>
 The <span>lights</span> are turned way <span>down low</span>
+I'm <span>dreaming</span> of a white Christmas
+Where the treetops <span>glisten</span>
+To hear <span>sleigh bells in the snow</span>
 Up on the house top <span>click,</span> click, <span>click</span>";
 
 	// Here we split it into lines

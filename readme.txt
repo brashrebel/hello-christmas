@@ -6,9 +6,9 @@ Tags: Christmas, holiday, winter
 
 Requires at least: 2.0.0
 
-Tested up to: 3.7.1
+Tested up to: 4.0
 
-Stable tag: 1.1
+Stable tag: 1.2
 
 License: GPLv2 or later
 
@@ -26,48 +26,41 @@ When activated this plugin checks to make sure Hello Dolly is NOT activated and 
 
 For further convenience, just in case you forget to deactivate this after the holidays, the plugin will only operate if Christmas is less than 40 days away.
 
+
 == Installation ==
-
-
 
 Using this plugin is very simple. All you have to do is:
 
 
 1. Upload the `hello-christmas` folder to the `/wp-content/plugins/` directory
 
-1. Make sure that 'Hello Dolly' is NOT active
+2. Make sure that 'Hello Dolly' is NOT active
 
-1. Activate the plugin through the 'Plugins' menu in WordPress
+3. Activate the plugin through the 'Plugins' menu in WordPress
 
-1. Look in the upper right corner of your screen and rejoice!
-
-
+4. Look in the upper right corner of your screen and rejoice!
 
 == Frequently Asked Questions ==
 
-
-
 = What is this plugin for? =
 
-
-
 Getting in the holiday spirit. That's pretty much it.
-
-
 
 = What can we expect in future releases? =
 
 Well if you keep yourself off the naughty list then I might consider:
 
 * Maybe a template tag for throwing this in your theme?
-
 * A shortcode for tossing this in your posts?
-
 * A simple widget
 
-
-
 == Changelog ==
+
+= 1.2 =
+
+* Added more song lyrics
+* Added cute little snow flakes to the lyrics output
+* Basic code cleanup
 
 = 1.1 =
 
@@ -76,11 +69,8 @@ Well if you keep yourself off the naughty list then I might consider:
 
 = 1.0 =
 
-
 * Initial release.
-
-
 
 == Upgrade Notice ==
 
-= 1.1 =
+= 1.2 =
