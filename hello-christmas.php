@@ -85,7 +85,7 @@ function hello_christmas() {
 	//Only go if no Hello Dolly and less than 40 days until Christmas
 	if ( ! function_exists( 'hello_dolly' ) && days_until_christmas() < 40 ) {
 		$chosen = christmas_get_lyric();
-		echo "<div id='christmas'><span class='hello-snow'><i></i><i></i><i></i><i></i></span>$chosen</div>";
+		echo "<div id='christmas'><span class='hello-snow'><i></i><i></i><i></i><i></i></span><a target='_blank' style='text-decoration: none' href='https://youtube.com/results?search_query=".str_replace(",", "%2C", str_replace("'", "%27", (preg_replace('/\s+/', '+', strip_tags(trim($chosen))))))."'>$chosen</a></div>";
 	}
 }
 
